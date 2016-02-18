@@ -22,6 +22,23 @@
         <item name="ripplePersistent">false</item>
         <item name="rippleInAdapter">false</item>
     </style>
+    <style name="ImageViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:contentDescription">@string/cd_main_image</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <!-- <item name="android:paddingBottom">8dp</item> -->
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:cropToPadding">true</item>
+    </style>
+
+    <style name="TextViewAppearance.Body1" parent="@style/TextViewAppearance">
+        <item name="typeface">robotoMedium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/main_color_grey_600</item>
+    </style>
 
     <style name="button_style1">
         <item name="android:layout_width">fill_parent</item>

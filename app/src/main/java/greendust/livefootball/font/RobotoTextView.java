@@ -6,7 +6,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import megaminds.findmedicine.R;
+import greendust.livefootball.R;
 
 
 public class RobotoTextView extends TextView {
