@@ -65,37 +65,29 @@
                         android:layout_toRightOf="@+id/thumbnail"
                         android:textSize="@dimen/rating" />
 
-                    <!-- Genre -->
-                    <TextView
-                        android:id="@+id/genre"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/rating"
-                        android:layout_marginTop="5dp"
-                        android:layout_toRightOf="@+id/thumbnail"
-                        android:textColor="@color/genre"
-                        android:textSize="@dimen/genre" />
+                    <!--&lt;!&ndash; Genre &ndash;&gt;-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/genre"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@id/rating"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:layout_toRightOf="@+id/thumbnail"-->
+                        <!--android:textColor="@color/genre"-->
+                        <!--android:textSize="@dimen/genre" />-->
 
-                    <!-- Release Year -->
-                    <TextView
-                        android:id="@+id/releaseYear"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:textColor="@color/year"
-                        android:textSize="@dimen/year" />
+                    <!--&lt;!&ndash; Release Year &ndash;&gt;-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/releaseYear"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:textColor="@color/year"-->
+                        <!--android:textSize="@dimen/year" />-->
                 </LinearLayout>
 
-                <greendust.livefootball.font.FontelloTextView
-                    android:id="@+id/list_item_favourite_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:padding="8dp"
-                    android:textColor="#fff"
-                    android:textSize="24dp"
-                    tools:ignore="SpUsage" />
+
             </LinearLayout>
         </RelativeLayout>
 

@@ -67,15 +67,15 @@ public class MainActivity extends Activity {
 								movie.setThumbnailUrl(obj.getString("image"));
 								movie.setRating(((Number) obj.get("rating"))
 										.doubleValue());
-								movie.setYear(obj.getInt("releaseYear"));
+//								movie.setYear(obj.getInt("releaseYear"));
 
-								// Genre is json array
-								JSONArray genreArry = obj.getJSONArray("genre");
-								ArrayList<String> genre = new ArrayList<String>();
-								for (int j = 0; j < genreArry.length(); j++) {
-									genre.add((String) genreArry.get(j));
-								}
-								movie.setGenre(genre);
+//								// Genre is json array
+//								JSONArray genreArry = obj.getJSONArray("genre");
+//								ArrayList<String> genre = new ArrayList<String>();
+//								for (int j = 0; j < genreArry.length(); j++) {
+//									genre.add((String) genreArry.get(j));
+//								}
+//								movie.setGenre(genre);
 
 								// adding movie to movies array
 								movieList.add(movie);
