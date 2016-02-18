@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="greendust.livefootball.MainActivity">
 
-    <!--<TextView-->
-        <!--android:id="@+id/myview"-->
-        <!--android:text="Hello how ar you?"-->
-        <!--android:textColor="#c81946"-->
-        <!--android:gravity="center"-->
-        <!--android:textSize="40dp"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="45dp"-->
-        <!--android:elevation="2dp"-->
-        <!--android:background="@drawable/myreact" />-->
 
     <ListView
         android:id="@+id/list"
@@ -24,4 +15,4 @@
         android:dividerHeight="1dp"
         android:listSelector="@drawable/list_row_selector" />
 
-</RelativeLayout>
+</LinearLayout>

@@ -65,8 +65,8 @@ public class MainActivity extends Activity {
 								Movie movie = new Movie();
 								movie.setTitle(obj.getString("title"));
 								movie.setThumbnailUrl(obj.getString("image"));
-								movie.setRating(((Number) obj.get("rating"))
-										.doubleValue());
+//								movie.setRating(((Number) obj.get("rating"))
+//										.doubleValue());
 //								movie.setYear(obj.getInt("releaseYear"));
 
 //								// Genre is json array
