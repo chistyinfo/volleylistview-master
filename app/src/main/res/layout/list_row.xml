@@ -1,60 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/list_row_selector"
-    android:padding="8dp" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
 
-    <!-- Thumbnail Image -->
+    >
 
-    <com.android.volley.toolbox.NetworkImageView
-        android:id="@+id/thumbnail"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginRight="8dp" />
+    <greendust.livefootball.view.ScaledLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <greendust.livefootball.buttoneffects.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <!-- Thumbnail Image -->
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/thumbnail"
+                    style="@style/ImageViewStyle" />
+            </greendust.livefootball.buttoneffects.MaterialRippleLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_top_bottom_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="8dp"
+                android:background="#80000000"
+                android:gravity="center_vertical" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <!-- Movie Title -->
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/thumbnail"
+                        android:layout_toRightOf="@+id/thumbnail"
+                        android:textSize="@dimen/title"
+                        android:textStyle="bold" />
+
+                    <!-- Rating -->
+                    <TextView
+                        android:id="@+id/rating"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title"
+                        android:layout_marginTop="1dip"
+                        android:layout_toRightOf="@+id/thumbnail"
+                        android:textSize="@dimen/rating" />
+
+                    <!-- Genre -->
+                    <TextView
+                        android:id="@+id/genre"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rating"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/thumbnail"
+                        android:textColor="@color/genre"
+                        android:textSize="@dimen/genre" />
+
+                    <!-- Release Year -->
+                    <TextView
+                        android:id="@+id/releaseYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/year"
+                        android:textSize="@dimen/year" />
+                </LinearLayout>
+
+                <greendust.livefootball.font.FontelloTextView
+                    android:id="@+id/list_item_favourite_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:padding="8dp"
+                    android:textColor="#fff"
+                    android:textSize="24dp"
+                    tools:ignore="SpUsage" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Just a dummy view -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
 
 
-    <!-- Movie Title -->
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/thumbnail"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:textSize="@dimen/title"
-        android:textStyle="bold" />
+    </greendust.livefootball.view.ScaledLinearLayout>
 
-    <!-- Rating -->
-    <TextView
-        android:id="@+id/rating"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_marginTop="1dip"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:textSize="@dimen/rating" />
-    
-    <!-- Genre -->
-    <TextView
-        android:id="@+id/genre"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rating"
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:textColor="@color/genre"
-        android:textSize="@dimen/genre" />
 
-    <!-- Release Year -->
-    <TextView
-        android:id="@+id/releaseYear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:textColor="@color/year"
-        android:textSize="@dimen/year" />
 
-</RelativeLayout>
+
+</LinearLayout>
