@@ -90,7 +90,8 @@
 <string name="title_activity_dse">DseActivity</string>
 <string name="title_single_list_item">SingleMenuItemActivity</string>
 <string name="title_list_item">ListItem</string>
-<string name="title_ipo">IPO</string>
+<string name="welcome">WelCome</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
 
     //button
 

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <RelativeLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -32,7 +32,7 @@
                 android:id="@+id/layout_top_bottom_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_marginTop="8dp"
@@ -56,15 +56,7 @@
                         android:textColor="#fff"
                         android:textSize="16sp" />
 
-                    <!--&lt;!&ndash; Rating &ndash;&gt;-->
-                    <!--<TextView-->
-                        <!--android:id="@+id/rating"-->
-                        <!--android:layout_width="fill_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_below="@id/title"-->
-                        <!--android:layout_marginTop="1dip"-->
-                        <!--android:layout_toRightOf="@+id/thumbnail"-->
-                        <!--android:textSize="@dimen/rating" />-->
+
 
                     <TextView
                         android:id="@+id/rating"
@@ -100,78 +92,7 @@
 
 
             </LinearLayout>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical" >
-
-            <greendust.livefootball.buttoneffects.MaterialRippleLayout
-                style="@style/RippleStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <!-- Thumbnail Image -->
-                <com.android.volley.toolbox.NetworkImageView
-                    android:id="@+id/thumbnai2"
-                    style="@style/ImageViewStyle" />
-            </greendust.livefootball.buttoneffects.MaterialRippleLayout>
-
-            <LinearLayout
-                android:id="@+id/layout_top_bottom_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginTop="8dp"
-                android:background="#80000000"
-                android:gravity="center_vertical" >
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical" >
-
-                    <!-- Movie Title -->
-                    <TextView
-                        android:id="@+id/title1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="4dp"
-                        android:paddingLeft="16dp"
-                        android:paddingRight="16dp"
-                        android:textColor="#fff"
-                        android:textSize="16sp" />
-
-                    <!--&lt;!&ndash; Rating &ndash;&gt;-->
-                    <!--<TextView-->
-                    <!--android:id="@+id/rating"-->
-                    <!--android:layout_width="fill_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_below="@id/title"-->
-                    <!--android:layout_marginTop="1dip"-->
-                    <!--android:layout_toRightOf="@+id/thumbnail"-->
-                    <!--android:textSize="@dimen/rating" />-->
-
-                    <TextView
-                        android:id="@+id/rating1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="4dp"
-                        android:paddingLeft="16dp"
-                        android:paddingRight="16dp"
-                        android:textColor="#fff"
-                        android:textSize="16sp" />
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-        </RelativeLayout>
+        </FrameLayout>
 
         <!-- Just a dummy view -->
 

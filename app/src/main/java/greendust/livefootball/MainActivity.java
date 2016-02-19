@@ -2,9 +2,12 @@ package greendust.livefootball;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.android.volley.Response;
@@ -19,6 +22,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import greendust.livefootball.Youtube.Youtube;
+
 public class MainActivity extends Activity {
 	// Log tag
 	private static final String TAG = MainActivity.class.getSimpleName();
@@ -28,6 +33,7 @@ public class MainActivity extends Activity {
 	private ProgressDialog pDialog;
 	private List<Movie> movieList = new ArrayList<Movie>();
 	private ListView listView;
+	String[] urlStrArray;
 	private CustomListAdapter adapter;
 
 	@Override
@@ -39,6 +45,23 @@ public class MainActivity extends Activity {
 		listView = (ListView) findViewById(R.id.list);
 		adapter = new CustomListAdapter(this, movieList);
 		listView.setAdapter(adapter);
+
+		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+											@Override
+											public void onItemClick(AdapterView<?> parent, View view,
+																	int position, long id) {
+												Intent intent = new Intent(MainActivity.this, Youtube.class);
+												intent.putExtra("url", urlStrArray[position]);
+												MainActivity.this.startActivity(intent);
+
+
+											}
+
+
+										}
+
+		);
 
 		pDialog = new ProgressDialog(this);
 		// Showing progress dialog before making http request
@@ -65,8 +88,9 @@ public class MainActivity extends Activity {
 								Movie movie = new Movie();
 								movie.setTitle(obj.getString("title"));
 								movie.setThumbnailUrl(obj.getString("image"));
-//								movie.setRating(((Number) obj.get("rating"))
-//										.doubleValue());
+								movie.setRating(((Number) obj.get("rating"))
+										.doubleValue());
+
 //								movie.setYear(obj.getInt("releaseYear"));
 
 //								// Genre is json array
